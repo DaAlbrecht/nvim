@@ -14,10 +14,10 @@ use {
 }
 
  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
+     use "olimorris/onedarkpro.nvim",
+	  as = 'onedarkpro',
 	  config = function()
-		  vim.cmd('colorscheme rose-pine')
+		  vim.cmd('colorscheme onedarkpro')
 	  end
   })
 
@@ -66,6 +66,6 @@ use {
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
-
+  use 'mfussenegger/nvim-dap'
 end)
 
