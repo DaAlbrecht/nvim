@@ -38,6 +38,7 @@ return require('packer').startup(function(use)
     use {
         "ray-x/lsp_signature.nvim",
     }
+
     use("theprimeagen/harpoon")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
@@ -76,5 +77,8 @@ return require('packer').startup(function(use)
     use("github/copilot.vim")
     use("eandrju/cellular-automaton.nvim")
     use("laytan/cloak.nvim")
-    use 'mfussenegger/nvim-dap'
+    use('mfussenegger/nvim-dap')
+
+    -- Java
+    use { "mfussenegger/nvim-jdtls", ft = { "java" } }
 end)
