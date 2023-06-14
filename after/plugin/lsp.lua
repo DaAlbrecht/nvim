@@ -37,6 +37,10 @@ lsp.set_preferences({
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
     -- require "lsp_signature".on_attach(signature_setup, bufnr)
+
+    vim.keymap.set("n", '<leader>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set("n", '<leader>rn', vim.lsp.buf.rename, opts)
+
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", 'gr', require('telescope.builtin').lsp_references, opts)
 

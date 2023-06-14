@@ -15,12 +15,21 @@ vim.opt.wrap = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
---vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 
-vim.opt.updatetime = 50
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
 
 vim.opt.colorcolumn = "120"
 
 vim.g.mapleader = " "
 
-vim.setclipboard = unnamedplus
+-- Case insensitive searching UNLESS /C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+
+
+-- Save undo history
+vim.o.undofile = true
